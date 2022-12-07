@@ -1,0 +1,4 @@
+/.initDone
+npm-debug*
+*.pyc
+deps/invoker

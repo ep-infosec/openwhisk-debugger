@@ -1,0 +1,61 @@
+{
+  "name": "openwhisk-debugger",
+  "version": "0.0.24",
+  "description": "A debugger for OpenWhisk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openwhisk/openwhisk-debugger.git"
+  },
+  "main": "client.js",
+  "bin": {
+    "wskdb": "./bin/wskdb"
+  },
+  "scripts": {
+    "prepublish": "./bin/prepublish",
+    "postinstall": "node ./bin/postinstall",
+    "test": "./node_modules/.bin/jshint wskdb.js lib/*.js lib/commands/*.js && ./util/scanCode.sh && ava --verbose --serial"
+  },
+  "bugs": {
+    "url": "https://github.com/openwhisk/openwhisk-debugger/issues"
+  },
+  "author": "Nick Mitchell",
+  "contributors": [
+    {
+      "name": "Kerry Cheng"
+    },
+    {
+      "name": "Nick Mitchell"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "serverless",
+    "openwhisk",
+    "debugger",
+    "wskdb",
+    "tools",
+    "tool",
+    "CLI"
+  ],
+  "dependencies": {
+    "argv": "0.0.2",
+    "colors": "^1.1.2",
+    "columnify": "^1.5.4",
+    "diff": "^3.0.1",
+    "expand-home-dir": "0.0.3",
+    "inquirer": "git://github.com/starpit/Inquirer.js.git",
+    "node-inspector": "git://github.com/kerryspchang/node-inspector.git",
+    "open": "0.0.5",
+    "openwhisk": "^3.4.1",
+    "properties-parser": "^0.3.1",
+    "request": "^2.75.0",
+    "tmp": "0.0.29",
+    "tree-kill": "^1.1.0",
+    "uuid": "^2.0.3",
+    "ws": "^1.1.1"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "jshint": "^2.9.3"
+  }
+}
